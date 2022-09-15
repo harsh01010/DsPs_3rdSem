@@ -3,59 +3,47 @@ typedef long long int ll;
 using namespace std;
 
 
-void pat1(void)
-{ 
-      for(int i=1;i<=4;i++)
-      {   int p = i;
-          for(int j=1;j<=i;j++)
-          {
-              cout<<p++;
+ vector<int> help(int N , vector<int>ans,int real)
+    { 
+          int t = real;
+          if(N==t)
+          {    
           }
-          cout<<"\n";
-      }
-}
-
-void pat1(void)
-{ 
-      for(int i=1;i<=4;i++)
-      {   int p = i;
-          for(int j=1;j<=i;j++)
+          else if(N>0)
           {
-              cout<<p++<<" ";
+               ans.push_back(N);
+               help(N-5 , ans,t);
           }
-          cout<<"\n";
-      }
-}
-
-void pat1(void)
-{ 
-      for(int i=1;i<=4;i++)
-      {   int p = i;
-          for(int j=1;j<=i;j++)
-          {
-              cout<<p++<<" ";
+          else {
+               ans.push_back(N);
+              help(N+5,ans,t);
           }
-          cout<<"\n";
-      }
-}
+          
+           ans.push_back(N);
+          return ans;
+         
+    }
 
-void pat2(void)
-{
-      
-}
-
-void pat2(void)
-{
-      
-}
+vector<int> pattern(int N){
+        // code here
+        vector<int>tp = {};
+        return help(N,tp,N);
+         
+        
+    }
+   
 int main()
 {
-    #ifndef ONLINE_JUDGE
-    freopen("i_p.txt", "r", stdin);
-    freopen("o_p.txt", "w", stdout);
-    #endif
+    // #ifndef ONLINE_JUDGE
+    // freopen("i_p.txt", "r", stdin);
+    // freopen("o_p.txt", "w", stdout);
+    // #endif
 
-     pat1();
+       int n; cin>>n;
+    
+    vector<int>ans = pattern(n);
+    for(int i=0;i<ans.size();i++) cout<<ans[i]<<" ";
+    
 
 
 
