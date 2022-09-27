@@ -2,6 +2,8 @@
 typedef long long int ll;
 using namespace std;
 
+
+
 int ser(int arr[],int lo,int hi,int x)
 {
       for(int i=lo;i<=hi;i++)

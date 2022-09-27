@@ -8,7 +8,24 @@ vector<vector<int>> multiply(vector<vector<int>>matrix1 , vector<vector<int>>mat
   {
             int n1 = matrix1.size() , m1 = matrix1[0].size();
             int n2 = matrix2.size() , m2 = matrix2[0].size();
-
+              vector<vector<int>>multi;
+            
+            for(int i=0;n1;i++)
+            {
+                    vector<int>row;
+                   for(int j=0;j<m2;j++)
+                   {
+                             int sum=0;
+                           for(int k=0;k<m1;k++)
+                           {
+                                 sum+= (matrix1[i][k]*matrix2[k][j]);
+                                 
+                           }
+                           row.push_back(sum);
+                   }
+                   multi.push_back(row);
+            }
+            return multi;
               
          
   }
@@ -47,6 +64,17 @@ int main()
 
 
            vector<vector<int>>ans = multiply(matrix1,matrix2);
+
+
+            cout<<"the product of the entered matrices is:\n";
+
+              for(int i=0;i<ans.size();i++)
+              {
+
+                     for(int j=0;j<ans[0].size();j++)
+                      cout<<ans[i][j]<<" ";
+                      cout<<"\n";
+              }
 
 
       }
