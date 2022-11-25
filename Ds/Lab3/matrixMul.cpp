@@ -1,8 +1,6 @@
 #include<bits/stdc++.h>
 typedef long long int ll;
 using namespace std;
-
-
 vector<vector<int>> multiply(vector<vector<int>>matrix1 , vector<vector<int>>matrix2)
 
   {
@@ -10,13 +8,13 @@ vector<vector<int>> multiply(vector<vector<int>>matrix1 , vector<vector<int>>mat
             int n2 = matrix2.size() , m2 = matrix2[0].size();
               vector<vector<int>>multi;
             
-            for(int i=0;n1;i++)
+            for(int i=0;i<n1;i++)
             {
                     vector<int>row;
                    for(int j=0;j<m2;j++)
                    {
                              int sum=0;
-                           for(int k=0;k<m1;k++)
+                           for(int k=0;k<n2;k++)
                            {
                                  sum+= (matrix1[i][k]*matrix2[k][j]);
                                  
@@ -62,11 +60,9 @@ int main()
                       matrix2.push_back(row);
               }
 
-
            vector<vector<int>>ans = multiply(matrix1,matrix2);
-
-
             cout<<"the product of the entered matrices is:\n";
+               cout<<"fine\n";
 
               for(int i=0;i<ans.size();i++)
               {

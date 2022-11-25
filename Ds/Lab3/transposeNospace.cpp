@@ -26,10 +26,7 @@ void printArr(vector<vector<int>>arr)
 }
 int main()
 {
-     #ifndef ONLINE_JUDGE
-     freopen("i_p.txt", "r", stdin);
-     freopen("o_p.txt", "w", stdout);
-     #endif
+    
 
        vector<vector<int>>arr;
         int n , m; cin>>n>>m;

@@ -35,7 +35,7 @@ class searrch{
               }
               return -1;
          }
-
+                  // recursive approach
          int terSerRec(int arr[],int x,int l,int h)
          {
               if(l>h) return -1;
@@ -50,7 +50,9 @@ class searrch{
                   else if(arr[mid2]<x) return terSerRec(arr,x,mid2+1,h);
                   else return terSerRec(arr,x,mid1+1,mid2-1);
          }
-
+     
+                // iterative approach
+            
          int terSerIt(int arr[],int x,int l,int h)
          {
                  while(l<=h)
@@ -71,10 +73,10 @@ class searrch{
 };
 int main()
 {
-    #ifndef ONLINE_JUDGE
-    freopen("i_p.txt", "r", stdin);
-    freopen("o_p.txt", "w", stdout);
-    #endif
+   //  #ifndef ONLINE_JUDGE
+   //  freopen("i_p.txt", "r", stdin);
+   //  freopen("o_p.txt", "w", stdout);
+   //  #endif
     int n; cin>>n;
         int arr[n];
 

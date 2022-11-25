@@ -33,6 +33,11 @@ using namespace std;
 int main()
 {
 
+     int n1 , n2; cin>>n1;
+     int arr[n1]; for(auto &it:arr) cin>>it;
+     cin>>n2; int brr[n2]; for(auto &it:brr) cin>>it;
+
+      for(auto it : findUnion(arr,brr,n1,n2)) cout<<it<<" ";
     
 
 

@@ -2,10 +2,9 @@
 typedef long long int ll;
 using namespace std;
 
-
 void traverse(int arr[],int n)
 {
-      for(auto i=0;i<n;i++)cout<<arr[i]<<" ";
+      for(auto i=0;i<n;i++)cout<<arr[i]<<" "; cout<<"\n";
 }
 
 void insert(int arr[],int n,int ind,int ele)
@@ -59,7 +58,7 @@ int rep(int arr[],int n)
         return -1;
        
 }
-int rev(int arr[],int n,int lo,int hi)
+void rev(int arr[],int lo,int hi)
 {
         while(lo<=hi)
           swap(arr[lo],arr[hi]) , lo++ , hi--;
@@ -71,8 +70,16 @@ int main()
 {
        int n; 
          cin>>n;
-         int arr[n];
-         for(int i=0;i<n;i++) cin>>n;
+         int arr[100];
+         for(int i=0;i<n;i++) cin>>arr[i];
+         traverse(arr,n);
+          rev(arr,0,n-1); 
+          traverse(arr,n);
+
+          insert(arr,n,0,5);
+          traverse(arr,n+1);
+
+
 
     
 

@@ -27,7 +27,7 @@ int main()
               int x; cin>>x;
                row.push_back(x);
           }
-          mat.push_back(row);
+          matt.push_back(row);
       }
 
       if(nn!=n or m!=mm ) cout<<"can't be added\n";
